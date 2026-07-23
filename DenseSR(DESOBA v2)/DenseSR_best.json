@@ -1,0 +1,39 @@
+{
+  "model": "DenseSR",
+  "record_name": "DenseSR best",
+  "validation_epoch": 12,
+  "checkpoint": "best_path.pth",
+  "metric_protocol": {
+    "mask": "DESOBA true region pixels",
+    "metric_size": 256,
+    "regions": [
+      "Shadow",
+      "non-Shadow",
+      "all"
+    ]
+  },
+  "metrics": {
+    "shadow": {
+      "PSNR": 24.74040374542957,
+      "SSIM": 0.7201634596188863,
+      "LPIPS": 0.00933767840960354,
+      "MAE": 6.438288222789764,
+      "RMSE": 7.357329576174418
+    },
+    "non_shadow": {
+      "PSNR": 31.57683372918851,
+      "SSIM": 0.9686659100055695,
+      "LPIPS": 0.03599543029663619,
+      "MAE": 1.7871186059117317,
+      "RMSE": 4.576823744535446
+    },
+    "all": {
+      "PSNR": 29.411188299975713,
+      "SSIM": 0.9572939383983612,
+      "LPIPS": 0.06035404696812232,
+      "MAE": 1.959377078860998,
+      "RMSE": 4.913572097612891
+    }
+  },
+  "note": "Anonymous release record; absolute machine and dataset paths are intentionally omitted."
+}
