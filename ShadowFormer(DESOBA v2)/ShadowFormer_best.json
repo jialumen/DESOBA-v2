@@ -1,0 +1,40 @@
+{
+  "model": "ShadowFormer",
+  "record_name": "ShadowFormer best",
+  "validation_epoch": 30,
+  "checkpoint": "best_path.pth",
+  "metric_protocol": {
+    "metric_size": 256,
+    "psnr_ssim_space": "RGB",
+    "mae_rmse_space": "LAB",
+    "regions": [
+      "Shadow",
+      "non-Shadow",
+      "all"
+    ]
+  },
+  "metrics": {
+    "shadow": {
+      "PSNR": 25.65,
+      "SSIM": 0.735,
+      "LPIPS": 0.0306,
+      "MAE": 7.36,
+      "RMSE": 7.24
+    },
+    "non_shadow": {
+      "PSNR": 48.20,
+      "SSIM": 0.994,
+      "LPIPS": 0.0014,
+      "MAE": 0.70,
+      "RMSE": 0.81
+    },
+    "all": {
+      "PSNR": 40.35,
+      "SSIM": 0.983,
+      "LPIPS": 0.0174,
+      "MAE": 0.94,
+      "RMSE": 1.54
+    }
+  },
+  "note": "Anonymous release record; absolute machine and dataset paths are intentionally omitted."
+}
