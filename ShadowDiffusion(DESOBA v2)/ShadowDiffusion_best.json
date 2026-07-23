@@ -1,0 +1,39 @@
+{
+  "model": "ShadowDiffusion",
+  "record_name": "ShadowDiffusion best",
+  "validation_epoch": 57,
+  "validation_iter": 40000,
+  "metric_protocol": {
+    "mask": "DESOBA flat shadow mask",
+    "compose_with_input": true,
+    "metric_size": 256,
+    "region_lpips": "AlexNet LPIPS spatial-map masked mean"
+  },
+  "metrics": {
+    "Shadow": {
+      "PSNR": 20.0894,
+      "SSIM": 0.5386,
+      "LPIPS": 0.1660,
+      "MAE": 15.014159,
+      "RMSE": 12.538328
+    },
+    "non-Shadow": {
+      "PSNR": 45.5052,
+      "SSIM": 0.9898,
+      "LPIPS": 0.0146,
+      "MAE": 0.525569,
+      "RMSE": 0.904617
+    },
+    "all": {
+      "PSNR": 37.8577,
+      "SSIM": 0.9777,
+      "LPIPS": 0.0205,
+      "MAE": 0.835015,
+      "RMSE": 1.873432
+    }
+  },
+  "validation_log": "not_included_for_privacy",
+  "exact_checkpoint_saved": true,
+  "best_path": "best_path.pth",
+  "note": "Metrics were measured by standalone full validation directly from I40000_E57 using the recorded old-metrics protocol."
+}
