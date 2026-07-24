@@ -1,26 +1,17 @@
 # PhaSR (DESOBA v2)
 
-This folder contains the PhaSR checkpoint and evaluation files for DESOBA v2 strict evaluation.
+Contents:
+- `best_path.pth`: selected PhaSR checkpoint, slimmed to model weights and anonymous metric metadata.
+- `test_desoba_v2_metrics_phasr_no_lpips.py`: PhaSR DESOBA v2 evaluator for Shadow, non-Shadow, and All regions.
+- `phasr_true_region_metrics_no_lpips.csv`: selected checkpoint metrics without LPIPS.
+- `region_metrics.py`: metric and geometry helpers used by the evaluator.
 
-## Files
-
-- `best_path.pth`: PhaSR checkpoint used for strict DESOBA v2 evaluation.
-- `test_desoba_paper_metrics_phasr.py`: strict evaluation entrypoint adapted for PhaSR.
-- `region_metrics.py`: region-metric helper used by the evaluation workflow.
-- `samples/87_0_pred.png`: single predicted sample image for `87_0`.
-
-## Strict DESOBA v2 metrics
-
-The checkpoint corresponds to the original-mask strict evaluation protocol.
+Selected metrics without LPIPS:
 
 | Region | PSNR | SSIM | MAE | RMSE |
 |---|---:|---:|---:|---:|
-| Shadow | 15.854 | 0.427 | 8.63029 | 13.23580 |
-| non-Shadow | 42.358 | 0.986 | 0.27345 | 0.99769 |
-| all | 32.669 | 0.973 | 0.42879 | 2.04257 |
+| Shadow | 15.731 | 0.4219 | 8.6639 | 13.3159 |
+| non-Shadow | 42.779 | 0.9862 | 0.2632 | 0.9141 |
+| All | 32.849 | 0.9732 | 0.4208 | 1.9820 |
 
-## Notes
-
-The metrics above use the original DESOBA v2 shadow masks without mask dilation or visual-region adjustment.
-
-The checkpoint file contains only `epoch` and `state_dict`.
+The release files intentionally avoid machine names, usernames, ports, absolute local paths, and absolute remote paths.

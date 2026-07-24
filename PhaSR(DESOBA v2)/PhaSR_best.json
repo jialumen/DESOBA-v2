@@ -1,0 +1,35 @@
+{
+  "model": "PhaSR",
+  "record_name": "PhaSR best",
+  "checkpoint": "best_path.pth",
+  "metric_protocol": {
+    "metric_size": 256,
+    "lpips": "not_included",
+    "regions": [
+      "Shadow",
+      "non-Shadow",
+      "All"
+    ]
+  },
+  "metrics_no_lpips": {
+    "Shadow": {
+      "PSNR": 15.731021478536892,
+      "SSIM": 0.4218686958452066,
+      "MAE": 8.663904280662537,
+      "RMSE": 13.315947882811228
+    },
+    "non-Shadow": {
+      "PSNR": 42.778811578045826,
+      "SSIM": 0.9861678592363994,
+      "MAE": 0.263187655325979,
+      "RMSE": 0.9140765379369259
+    },
+    "All": {
+      "PSNR": 32.849088479150666,
+      "SSIM": 0.973182107925415,
+      "MAE": 0.4208237448434035,
+      "RMSE": 1.981981057504813
+    }
+  },
+  "note": "Anonymous release record; absolute machine and dataset paths are intentionally omitted."
+}

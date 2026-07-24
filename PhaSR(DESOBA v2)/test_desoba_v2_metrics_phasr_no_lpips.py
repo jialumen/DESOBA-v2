@@ -32,8 +32,8 @@ class _Opt:
 def parse_args():
     p = argparse.ArgumentParser(
         description="Evaluate PhaSR on DESOBA v2 using the HomoFormer paper metric protocol.")
-    p.add_argument("--weights", required=True)
-    p.add_argument("--data", required=True)
+    p.add_argument("--weights", default="best_path.pth")
+    p.add_argument("--data", default="./data/DESOBAv2_test")
     p.add_argument("--mask_dir", default="")
     p.add_argument("--win_size", type=int, default=16)
     p.add_argument("--embed_dim", type=int, default=32)
