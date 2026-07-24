@@ -1,0 +1,43 @@
+{
+  "model": "StableShadowRemoval",
+  "record_name": "StableShadowRemoval best",
+  "checkpoint": "checkpoint-41736",
+  "weight_file": "checkpoint-41736/unet/diffusion_pytorch_model.safetensors",
+  "weight_parts": [
+    "checkpoint-41736/unet/diffusion_pytorch_model.safetensors.part01",
+    "checkpoint-41736/unet/diffusion_pytorch_model.safetensors.part02"
+  ],
+  "reconstructed_weight_sha256": "8c4f4b12b0247176533a2db54fd0a3738b01e9917e9500a63497f2fb719f0a08",
+  "metric_protocol": {
+    "metric_size": 256,
+    "regions": [
+      "Shadow",
+      "non-Shadow",
+      "all"
+    ]
+  },
+  "metrics": {
+    "shadow": {
+      "PSNR": 17.069885,
+      "SSIM": 0.443831,
+      "LPIPS": 0.244115,
+      "MAE": 18.914691,
+      "RMSE": 18.845162
+    },
+    "non_shadow": {
+      "PSNR": 24.222094,
+      "SSIM": 0.687531,
+      "LPIPS": 0.099906,
+      "MAE": 7.519943,
+      "RMSE": 7.768277
+    },
+    "all": {
+      "PSNR": 23.390818,
+      "SSIM": 0.679375,
+      "LPIPS": 0.106307,
+      "MAE": 7.888557,
+      "RMSE": 8.495350
+    }
+  },
+  "note": "Anonymous release record; absolute machine and dataset paths are intentionally omitted."
+}
